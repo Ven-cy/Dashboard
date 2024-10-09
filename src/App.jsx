@@ -22,18 +22,18 @@ function App() {
   return (
     <>
     <div className='bg-gradient-to-r from-black to-[#0718fb] text-white bg-cover h-[729px]'>
-    <nav className='bg-green-400 h-[60px]  '></nav>
-    <div className='text-center border-4 rounded-xl border-green-400 w-[500px] h-[500px] text-3xl my-[70px] mx-[500px] '>
+    <nav className='bg-[#7CFC00] h-[60px]  '></nav>
+    <div className='text-center border-4 rounded-xl border-[#7CFC00] w-[500px] h-[500px] text-3xl my-[70px] mx-[500px] '>
       <div className='flex justify-between mx-[20px] my-[30px]'>
         <div>Event</div>
-      <div className='bg-white text-black'>
+      <div className='bg-[#7CFC00] text-black'>
       <TEDropdown className="flex justify-center">
       <TERipple rippleColor="light">
         <TEDropdownToggle
           tag="a"
-          className="flex items-center w-[340px]"
+          className="flex items-center w-[320px] ml-[20px] mt-[-3px]"
         >
-          Events
+          <h1>Events</h1>
         </TEDropdownToggle>
       </TERipple>
 
@@ -64,7 +64,7 @@ function App() {
       </div>
       <div className='flex justify-between mx-[20px] my-[30px]'>
       <div>Name</div>
-      <div>
+      <div className='border-[#7CFC00] border-spacing-4'>
       <Form.Control
         type="name"
         id="name"
@@ -74,7 +74,7 @@ function App() {
       </div>
       <div className='flex justify-between mx-[20px] my-[30px]'>
       <div>Poster</div>
-      <div className='bg-white text-black text-xl w-[340px]'>
+      <div className='bg-[#7CFC00] text-black text-xl w-[150px] rounded-xl text-center mr-[100px]'>
       <UploadButton uploader={uploader}
                 options={options}
                 onComplete={files => alert(files.map(x => x.fileUrl).join("\n"))}>
@@ -98,7 +98,7 @@ function App() {
       </div>
       <div className='flex justify-between mx-[20px] my-[30px] '>
       <div>Time</div>
-      <div className='bg-white text-black  w-[340px]'>
+      <div className='bg-white w-[340px] '>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer components={['DateTimePicker']}>
         <DateTimePicker label="Basic date time picker" />
@@ -106,7 +106,7 @@ function App() {
     </LocalizationProvider>
       </div>
       </div>
-      <button className='bg-green-400 rounded w-[120px] h-[45px] my-[20px]'>Update</button>
+      <button className='bg-[#7CFC00] rounded w-[120px] h-[45px] my-[20px]'>Update</button>
     </div>
     <footer></footer>
     </div>
